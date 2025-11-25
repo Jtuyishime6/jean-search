@@ -1,6 +1,6 @@
 # JobFinder - Professional Job Search Application
 
-- **DEMO:**
+- **DEMO:** https://youtu.be/yLHAYP9nXPc
 
 A simple and modern job search web application that uses the LinkedIn Job Search API to help users find their next career opportunity.
 
