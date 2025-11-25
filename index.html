@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobFinder - Professional Job Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>API Settings</h2>
+            <p>Enter your RapidAPI key to access job listings</p>
+            <input type="text" id="apiKeyInput" placeholder="Enter your RapidAPI key">
+            <button id="saveApiKey" class="btn-primary">Save API Key</button>
+            <p class="info-text">Get your API key from <a href="https://rapidapi.com" target="_blank">RapidAPI</a></p>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <h1>JobFinder</h1>
+                <button id="settingsBtn" class="settings-btn">⚙ Settings</button>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="titleInput" placeholder="Job Title (e.g., Software Engineer)">
+                <input type="text" id="locationInput" placeholder="Location (e.g., United States)">
+                <select id="timeFilter">
+                    <option value="all">All Time</option>
+                    <option value="today">Today</option>
+                    <option value="3days">Last 3 Days</option>
+                    <option value="week">This Week</option>
+                    <option value="month">This Month</option>
+                </select>
+                <select id="remoteFilter">
+                    <option value="">All Jobs</option>
+                    <option value="true">Remote Only</option>
+                </select>
+                <button id="searchBtn" class="btn-primary">Search Jobs</button>
+            </div>
+            
+            <!-- Advanced Filters -->
+            <div class="advanced-filters">
+                <select id="jobTypeFilter">
+                    <option value="">All Types</option>
+                    <option value="FULLTIME">Full Time</option>
+                    <option value="PARTTIME">Part Time</option>
+                    <option value="CONTRACTOR">Contract</option>
+                    <option value="INTERN">Internship</option>
+                </select>
+                <select id="experienceFilter">
+                    <option value="">Any Experience</option>
+                    <option value="under_3_years_experience">Under 3 Years</option>
+                    <option value="more_than_3_years_experience">3+ Years</option>
+                    <option value="no_experience">No Experience Required</option>
+                    <option value="no_degree">No Degree Required</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Results Info -->
+        <div id="resultsInfo" class="results-info"></div>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Searching for jobs...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+        <!-- Sort and Filter Bar -->
+        <div id="sortBar" class="sort-bar" style="display: none;">
+            <label>Sort by:</label>
+            <select id="sortSelect">
+                <option value="date-desc">Newest First</option>
+                <option value="date-asc">Oldest First</option>
+                <option value="company">Company Name</option>
+            </select>
+        </div>
+
+        <!-- Jobs Container -->
+        <div id="jobsContainer" class="jobs-container"></div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="pagination" style="display: none;">
+            <button id="prevBtn" class="btn-secondary">Previous</button>
+            <span id="pageInfo"></span>
+            <button id="nextBtn" class="btn-secondary">Next</button>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Created by Jean De Dieu | <a href="mailto:j.tuyishime6@alustudent.com">j.tuyishime6@alustudent.com</a></p>
+            <p>Powered by <a href="https://rapidapi.com" target="_blank">RapidAPI LinkedIn Job Search</a></p>
+        </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

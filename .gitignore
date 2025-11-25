@@ -1,0 +1,9 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment
+.env
